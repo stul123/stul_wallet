@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="добовление/отслеживание расходов и доходов by stul (удобно очень)">
+    <meta name="keywords" content="отслеживаниен расходов ">
+    <meta name="author" content="stul">
+    <meta property="og:site_name" content="stul кошель | расходы">
+    <meta name="og:title" content="stul кошель | расходы">
+    <meta name="og:description" content="добовление/отслеживание расходов и доходов by stul (удобно очень)">
+    <meta name="og:image" content="https://smski.site/fav/apple-touch-icon.png">
+    <meta name="og:url" content="https://smski.site/w">
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>stul кошель | заработал</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../fav/favicon-16x16.png">
+    <link rel="manifest" href="../fav/site.webmanifest">
+    <link rel="mask-icon" href="../fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+    <main>
+        <div class="main_con rounded-4 shadow">
+            <div class="tabs">
+                <a href="https://smski.site" class="home_btn">
+                    <img src="../fav/favicon-32x32.png" alt="favicon">
+                </a>
+                <a href="../" id="reload_btn" class="tab">home</a>
+                <a href="../add/" class="tab">add spend</a>
+                <a class="tab active">earnings</a>
+            </div>
+            <div class="modal-content">
+                <div class="month">
+                    <div class="left row btn btn-primary btn-sm">➤</div>
+                    <select id="month_select">
+                        <!-- <option value="все время" disabled>все время</option> -->
+                    </select>
+                    <div class="right row btn btn-primary btn-sm">➤</div>
+                </div>
+                <div class="top">
+                    <div class="round_info_block">
+                        <div class="title"></div>
+                        <canvas id="round_info"></canvas>
+                    </div>
+                    <div class="cats_block"></div>
+                </div>
+                <div class="all_info"></div>
+                <div class="sharemodel_btn_block">
+                    <div class="btns_block">
+                        <button class="btn btn-primary btn-sm" id="all_earning_time_btn">all time</button>
+                        <button class="btn btn-primary btn-sm" id="add_earning" data-toggle="modal" data-target="#addear">add amount</button>
+                        <button class="btn btn-danger btn-sm" id="clear_earning">clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- popup -->
+    <div id="addear" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="close mb-2">
+                    <h1 class="modal-title fs-5">Новый бабос</h1>
+                    <button type="button" class="btn btn-secondary btn-sm" id="closecatpopup" data-dismiss="modal">X</button>
+                </div>
+                <div class="form-floating mb-3">
+                    <input inputmode="numeric" type="number" maxlength="50" class="form-control rounded-3" id="input_earning" placeholder="10000">
+                    <label for="pluscat">Скок $ на этот раз ?</label>
+                </div>
+                <div class="form-group when_block mb-3">
+                    <label for="inputDate">Введите дату:</label>
+                    <input type="date" id="inputDate" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" id="add_earning_btn">Добавить</button>
+            </div>
+        </div>
+    </div>
+    <div class="ms_block"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/earnings.js"></script>
+    <script>
+        loadmain_page();
+    </script>
+</body>
+
+</html>
