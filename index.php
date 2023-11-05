@@ -23,6 +23,7 @@
             <meta name="og:description" content="добовление/отслеживание расходов и доходов by stul (удобно очень)">
             ';
         }
+        
     ?>
         <meta name="keywords" content="отслеживаниен расходов ">
         <meta name="og:image" content="https://smski.site/fav/apple-touch-icon.png">
@@ -40,7 +41,6 @@
         <link rel="mask-icon" href="./fav/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-
 </head>
 
 <body>
@@ -57,9 +57,7 @@
             <div class="modal-content">
                 <div class="month">
                     <div class="left row btn btn-primary btn-sm">➤</div>
-                    <select id="month_select">
-                        <!-- <option value="все время" disabled>все время</option> -->
-                    </select>
+                    <select id="month_select"></select>
                     <div class="right row btn btn-primary btn-sm">➤</div>
                 </div>
                 <div class="top">
@@ -117,7 +115,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="close mb-2">
-                    <h1 class="modal-title fs-6">Изменить расход</h1> 
+                    <h1 class="modal-title fs-6">Изменить расход</h1>
                 </div>
                 <div class="mb-2">
                     <p>Скок потратил ₽:</p>
@@ -125,7 +123,7 @@
                     <p>Смс/оправдание (не обязон):</p>
                     <input type="text" maxlength="100" class="form-control rounded-3 mb-3" id="sms" data-id="" placeholder="Смс/оправдание (не обязон)">
                     <div class="form-group when_block">
-                        <input type="date" id="inputDate"  data-id="" class="form-control">
+                        <input type="date" id="inputDate" data-id="" class="form-control">
                         <label for="inputDate">-дата</label>
                     </div>
                 </div>
